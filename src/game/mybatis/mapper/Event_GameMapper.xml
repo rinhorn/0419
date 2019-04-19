@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Event_Game">
+
+	<insert id="insert" parameterType="Event_Game">
+		insert into event_game(event_game_id,event_id,game_id) 
+		values(seq_event_game.nextval,#{event.event_id},#{game.game_id})
+	</insert>
+	
+</mapper>
